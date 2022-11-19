@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    /> -->
+
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div class="img_container">
+      <div class="img_layout">
+        <img src="./images/bg-intro-desktop.png" />
+        <div class="content">
+          <div class="txt">
+            <h1>Learn to code by watching others</h1>
+            <div>
+              See how experienced developers solve problems in real-time.
+              Watching scripted tutorials is great, but understanding how
+              developers think is invaluable.
+            </div>
+          </div>
+          <form action="submit" id="form">
+            <button class="try_btn">
+              <strong>Try it free 7 days</strong> then $20/mo. thereafter
+            </button>
+            <div class="form_body">
+              <div class="form_fields">
+                <div>
+                  <!-- First Name -->
+                  <input
+                    placeholder="First name"
+                    type="text"
+                    tabindex="1"
+                    id="first_name"
+                    autofocus
+                    required
+                  />
+                  <i class="fa fa-exclamation-circle failure-icon"></i>
+                  <i class="fa fa-check-circle success-icon"></i>
+                  <div class="error"></div>
+                </div>
+
+                <div>
+                  <!-- Last Name -->
+                  <input
+                    placeholder="Last name"
+                    type="text"
+                    tabindex="1"
+                    id="last_name"
+                    autofocus
+                    required
+                  />
+                  <i class="fa fa-exclamation-circle failure-icon"></i>
+                  <i class="fa fa-check-circle success-icon"></i>
+                  <div class="error"></div>
+                </div>
+
+                <div>
+                  <!-- Email Address -->
+                  <input
+                    placeholder="Your Email Address"
+                    tabindex="2"
+                    id="email"
+                    required
+                  />
+                  <i class="fa fa-exclamation-circle failure-icon"></i>
+                  <i class="fa fa-check-circle success-icon"></i>
+                  <div class="error"></div>
+                </div>
+                <div>
+                  <!-- Password -->
+                  <input
+                    placeholder="Password"
+                    id="password"
+                    type="password"
+                    required
+                  />
+                  <i class="fa fa-exclamation-circle failure-icon"></i>
+                  <i class="fa fa-check-circle success-icon"></i>
+                  <div class="error"></div>
+                  <!-- <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">
+                      A <b>capital (uppercase)</b> letter
+                    </p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">
+                      Minimum <b>8 characters</b>
+                    </p>
+                  </div> -->
+                </div>
+                <button
+                  name="submit"
+                  type="submit"
+                  id="contact-submit"
+                  data-submit="...Sending"
+                >
+                  <strong> Claim Your Free Trial </strong>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./assets//js/script.js"></script>
+  </body>
+</html>

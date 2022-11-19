@@ -1,0 +1,184 @@
+body {
+  /* The message box is shown when the user clicks on the password field */
+  #message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  #message p {
+    padding: 10px 35px;
+    font-size: 18px;
+  }
+
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: green;
+  }
+
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+  }
+  .img_container {
+    display: grid;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    .img_layout {
+      height: 500px;
+      background-color: #f97877;
+      width: 100%;
+      position: relative;
+
+      .content {
+        color: white;
+        /* display: grid; */
+        /* grid-template-columns: 1fr 5fr 5fr 1fr; */
+        /* grid-gap: 1rem; */
+        height: 500px;
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .txt {
+          width: 50%;
+          padding: 2rem;
+        }
+        #form {
+          width: 50%;
+          margin: 2rem;
+          .form_body {
+            background: white;
+            padding: 25px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2),
+              0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            border-radius: 8px;
+            color: black;
+
+            input {
+              width: 100%;
+              margin: 1rem 0 0 0;
+              height: 2rem;
+              border: 1px solid gray;
+              border-radius: 4px;
+              padding-right: 0;
+            }
+
+            button[type="submit"] {
+              margin-top: 1rem;
+              cursor: pointer;
+              width: 100%;
+              border: none;
+              background: #4caf50;
+              border: 1px solid #4caf50;
+              color: #fff;
+              height: 2.5rem;
+              border-radius: 4px;
+              text-transform: uppercase;
+              // box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+
+              &:hover {
+                background: #43a047;
+                -webkit-transition: background 0.3s ease-in-out;
+                -moz-transition: background 0.3s ease-in-out;
+                transition: background-color 0.3s ease-in-out;
+              }
+            }
+          }
+
+          .try_btn {
+            height: 2.5rem;
+            width: 100%;
+            color: white;
+            background-color: #5d54a3;
+            border: none;
+            margin-bottom: 1rem;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            &:hover {
+              background-color: #404079;
+            }
+          }
+        }
+      }
+
+      img {
+        height: 500px;
+        width: 100%;
+      }
+    }
+  }
+}
+form i {
+  position: absolute;
+  padding: 10px;
+}
+form {
+  .form_fields {
+    div {
+      position: relative;
+    }
+  }
+}
+.success-icon,
+.failure-icon {
+  top: 1rem;
+  right: 0;
+  opacity: 0;
+}
+
+.failure-icon,
+.error {
+  color: red;
+}
+
+.success-icon {
+  color: green;
+}
+
+.error {
+  font-size: 14.5px;
+  margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+  /* CSS */
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .img_layout {
+    height: 100% !important;
+    img {
+      height: 100% !important;
+    }
+    .content {
+      height: 100% !important;
+      flex-direction: column !important;
+    }
+  }
+  .txt {
+    width: 90% !important;
+    text-align: center;
+    padding: 1rem !important;
+  }
+  #form {
+    width: 87% !important;
+  }
+}
